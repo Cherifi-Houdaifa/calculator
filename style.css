@@ -16,7 +16,7 @@ html, body {
     background-color: black;
     border-radius: 10px;
     margin: auto;
-    margin-top: 70px;
+    margin-top: 40px;
 }
 .container .display {
     grid-column: 1 / -1;
@@ -73,4 +73,15 @@ html, body {
 }
 .container .numbers input:active {
     background-color: #707cac;
+}
+
+.footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 2rem;
+    padding: 15px 15px 15px 0;
+}
+.footer a img {
+    width: 30px;
+    height: 30px;
 }
