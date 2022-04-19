@@ -31,6 +31,9 @@ html, body {
     border-radius: 5px;
     font-size: 2rem;
 }
+.container .wide:active {
+    background-color: #cc592c;
+}
 /* #94a3e0 numbers*/
 /* #5e678c operators */
 .container .operators {
@@ -47,7 +50,24 @@ html, body {
     border-radius: 5px;
     font-size: 2rem;
 }
+
+.container .operators input:active {
+    background-color: #3c4158;
+}
 .container .numbers {
     grid-column: 1 / 4;
     grid-row: 3 / 7;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+.container .numbers input {
+    border: none;
+    background-color: #94a3e0;
+    margin: 2px;
+    border-radius: 5px;
+    font-size: 2rem;
+}
+.container .numbers input:active {
+    background-color: #707cac;
 }
