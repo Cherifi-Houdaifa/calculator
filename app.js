@@ -33,7 +33,9 @@ for (let i = 0; i < numbers.length; i++) {
     
     if (typeof numbers[i] === "number") {
         btn.addEventListener("click", (e) => {
-            display.textContent += numbers[i].toString();
+            if (display.textContent.length < 11) {
+                display.textContent += numbers[i].toString();                
+            }
         });
     }
     else if (numbers[i] === "=") {
@@ -43,8 +45,8 @@ for (let i = 0; i < numbers.length; i++) {
             if (result === undefined) {
                 return;    
             }
-            if (result.toString().length > 15) {
-                result = result.toString().substring(0, 15);
+            if (result.toString().length > 11) {
+                result = result.toString().substring(0, 11);
             }
             if (result === Infinity) {
                 alert("Can't divide by zero");
@@ -55,10 +57,9 @@ for (let i = 0; i < numbers.length; i++) {
     }
     else if (numbers[i] === ".") {
         btn.addEventListener("click", (e) => {
-            if (display.textContent.includes(".")) {
-                return;
+            if (display.textContent.includes(".") === false && display.textContent.length < 11) {
+                display.textContent += numbers[i];                
             }
-            display.textContent += numbers[i];
         });
     }
 
