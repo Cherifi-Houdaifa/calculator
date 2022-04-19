@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html, body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    width: 400px;
+    height: 500px;
+    border: solid black 12px;
+    background-color: black;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 70px;
+}
+.container .display {
+    grid-column: 1 / -1;
+    background-color: #cac6c6;
+    margin: 3px;
+    border-radius: 5px;
+}
+.container .wide {
+    grid-column: span 2;
+    background-color: #fc6f38;
+    border: none;
+    margin: 3px;
+    border-radius: 5px;
+    font-size: 2rem;
+}
+/* #94a3e0 numbers*/
+/* #5e678c operators */
+.container .operators {
+    grid-column: 4 / 5;
+    grid-row: 3 / 7;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+}
+.container .operators input {
+    border: none;
+    background-color: #5e678c;
+    margin: 4px;
+    border-radius: 5px;
+    font-size: 2rem;
+}
+.container .numbers {
+    grid-column: 1 / 4;
+    grid-row: 3 / 7;
+}
